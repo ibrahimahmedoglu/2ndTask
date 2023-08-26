@@ -1,0 +1,82 @@
+body {
+  margin: 0;
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Interactive UI elements */
+.button {
+  background-color: #eee;
+  padding: 10px 20px;
+  border: none;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #ccc;
+}
+
+.slider {
+  /* CSS styling for the slider */
+}
+
+.toggle {
+  /* CSS styling for the toggle */
+}
+
+/* Section with pseudo-elements */
+.section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+/* CSS 3D Transform component */
+.card {
+  width: 200px;
+  height: 200px;
+  perspective: 1000px;
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
+}
+
+.card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.card-front {
+  background-color: blue;
+}
+
+.card-back {
+  background-color: red;
+  transform: rotateY(180deg);
+}
+
+/* Custom cursor */
+.section {
+  cursor: url(cursor.png), auto;
+}
